@@ -22,5 +22,14 @@ Now that Terraform has loaded the outputs into your project's state, use the `te
 *Use the `lb_url` output value with the `-raw` flag to cURL the load balancer and verify the response.*
 - `curl $(terraform output -raw lb_url)`
 
+### Redact sensitive outputs
+- Add the following sensitive output blocks to your `outputs.tf` file.
+- Apply this change to add these outputs to your state file.
+- Use `terraform output` to query the database password by name, and notice that Terraform will not redact the value when you specify the output by name.
+- `terraform output db_password`
+- Output values are stored as plain text in your state file.
+- Use the `grep` command to see the values of the sensitive outputs in your state file.
+- `grep --after-context=10 outputs terraform.tfstate`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/outputs
