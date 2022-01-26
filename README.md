@@ -12,5 +12,15 @@ In this tutorial, you will use Terraform to deploy a web application on AWS. The
 - You can use the result of any Terraform expression as the value of an output.
 - `terraform apply`
 
+### Query outputs
+Now that Terraform has loaded the outputs into your project's state, use the `terraform output` command to query all of them.
+- `terraform output`
+- Next, query an individual output by name.
+- `terraform output lb_url`
+- You can use the `-raw` flag when querying a specified output for machine-readable format.
+  
+*Use the `lb_url` output value with the `-raw` flag to cURL the load balancer and verify the response.*
+- `curl $(terraform output -raw lb_url)`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/outputs
