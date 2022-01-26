@@ -7,5 +7,10 @@ In this tutorial, you will use Terraform to deploy a web application on AWS. The
 - Now apply the configuration.
 - `terraform apply`
 
+### Output VPC and load balancer information
+- Add a block to `outputs.tf` to show the ID of the VPC.
+- You can use the result of any Terraform expression as the value of an output.
+- `terraform apply`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/outputs
