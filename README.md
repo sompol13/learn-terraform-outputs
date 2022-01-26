@@ -12,6 +12,8 @@ In this tutorial, you will use Terraform to deploy a web application on AWS. The
 - You can use the result of any Terraform expression as the value of an output.
 - `terraform apply`
 
+<img width="787" alt="1" src="https://user-images.githubusercontent.com/33342822/151214887-db59185c-7517-4c5b-9b77-317b35f8ef51.png">
+
 ### Query outputs
 Now that Terraform has loaded the outputs into your project's state, use the `terraform output` command to query all of them.
 - `terraform output`
@@ -34,6 +36,8 @@ Now that Terraform has loaded the outputs into your project's state, use the `te
 ### Generate machine-readable output
 The Terraform CLI output is designed to be parsed by humans. To get machine-readable format for automation, use the `-json` flag for JSON-formatted output.
 - `terraform output -json`
+
+<img width="790" alt="Screen Shot 2565-01-27 at 00 25 38" src="https://user-images.githubusercontent.com/33342822/151214797-8467579d-8536-4f61-a75d-bb58bc6b8349.png">
 
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/outputs
