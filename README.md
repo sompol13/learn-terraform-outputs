@@ -31,5 +31,9 @@ Now that Terraform has loaded the outputs into your project's state, use the `te
 - Use the `grep` command to see the values of the sensitive outputs in your state file.
 - `grep --after-context=10 outputs terraform.tfstate`
 
+### Generate machine-readable output
+The Terraform CLI output is designed to be parsed by humans. To get machine-readable format for automation, use the `-json` flag for JSON-formatted output.
+- `terraform output -json`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/outputs
